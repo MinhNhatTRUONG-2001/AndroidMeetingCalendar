@@ -1,0 +1,129 @@
+<resources>
+    <string name="app_name">Meeting Calendar</string>
+    <string name="app_title">MEETING CALENDAR</string>
+    <string name="add_subtitle">Add a new meeting</string>
+    <string name="meeting_title">Title of the meeting</string>
+    <string name="meeting_place">Place</string>
+    <string name="meeting_participants">Participants</string>
+    <string name="meeting_datetime">Date and time</string>
+    <string name="meeting_date">Date:</string>
+    <string name="meeting_time">Time:</string>
+    <string name="date_picker_button">Select date</string>
+    <string name="time_picker_button">Select time</string>
+    <string name="add_participant">Add</string>
+    <string name="add_meeting">Submit</string>
+    <string name="manage_subtitle">Manage meetings</string>
+    <string name="manage_summary_button">Summary</string>
+    <string name="manage_update_button">Update</string>
+    <string name="manage_search_button">Search</string>
+    <string name="summary_subtitle">Meeting summary</string>
+    <string name="back_button">Back</string>
+    <string name="search_subtitle">Search meetings</string>
+    <string name="search_participant_name">Participant name</string>
+    <string name="search_by">Search by:</string>
+    <string name="search_result">Search result</string>
+    <string name="search_participant_name_hint">Case-insensitive</string>
+    <string name="search_button">Search</string>
+    <string name="no_meeting">No meeting is found!</string>
+    <string name="clear_date_button">Clear date</string>
+    <string name="clear_time_button">Clear time</string>
+    <string name="search_complete">Search complete!</string>
+    <string name="meeting_added">Meeting is added! Id:&#160;</string>
+    <string name="meeting_updated">Meeting is updated!</string>
+    <string name="meeting_list_updated">Meeting list is updated!</string>
+    <string name="update_subtitle">Update meetings</string>
+    <string name="update_other_subtitle">Update other meetings</string>
+    <string name="update_button">Update</string>
+    <string name="select_button">Select</string>
+    <string name="meeting_id">Meeting ID:</string>
+    <string name="settings_subtitle">Settings</string>
+    <string name="font_size">Font size</string>
+    <string name="small_font_size">Small</string>
+    <string name="medium_font_size">Medium</string>
+    <string name="large_font_size">Large</string>
+    <string name="very_large_font_size">Very large</string>
+    <string name="default_color">Default</string>
+    <string name="black">Black</string>
+    <string name="white">White</string>
+    <string name="blue">Blue</string>
+    <string name="orange">Orange</string>
+    <string name="yellow">Yellow</string>
+    <string name="cyan">Cyan</string>
+    <string name="lawnGreen">Green</string>
+    <string name="pink">Pink</string>
+    <string name="purple">Purple</string>
+    <string name="apply_button">Apply</string>
+    <string name="manage_settings_button">Settings</string>
+    <string name="user_prefs_file_name">user_prefs</string>
+    <string name="settings_applied">Settings are applied!</string>
+    <string name="theme">Theme</string>
+    <string name="add_participant_hint">Add a participant…</string>
+    <string name="font_size_progress_prefs">font_size_progress</string>
+    <string name="app_title_font_size_prefs">app_title_font_size</string>
+    <string name="subtitle_font_size_prefs">subtitle_font_size</string>
+    <string name="edittext_font_size_prefs">edittext_font_size</string>
+    <string name="other_texts_font_size_prefs">other_texts_font_size</string>
+    <string name="text_color_prefs">text_color</string>
+    <string name="bg_color_prefs">bg_color</string>
+    <string name="theme_checked_id_prefs">theme_checked_id</string>
+    <string name="meeting_list_intent_extra">meeting_list</string>
+    <string name="dir_name">data/databases</string>
+    <string name="db_name">meetings_db</string>
+    <string name="table_name">meetings</string>
+    <string name="img_table_name">participant_images</string>
+    <string name="version_upgrade">"Upgrading database from version "</string>
+    <string name="warning_data_delete">All old data will be deleted!</string>
+    <string name="db_class_tag">DBAdapter</string>
+    <string name="db_add_error">Error while adding meeting to database!</string>
+    <string name="db_update_error">Error while updating meeting in database!</string>
+    <string name="db_delete_error">Error while deleting meeting from database!</string>
+    <string name="manage_about_button">Help &amp; About</string>
+    <string name="about_subtitle">About</string>
+    <string name="help_subtitle">Help</string>
+    <string name="delete_button">Delete</string>
+    <string name="delete_dialog_title">Warning!</string>
+    <string name="delete_dialog_message">Are you sure to delete this meeting? This action cannot be undone.</string>
+    <string name="delete_dialog_positive">Yes</string>
+    <string name="delete_dialog_negative">No</string>
+    <string name="meeting_deleted">Meeting is deleted!</string>
+    <string name="path_not_found">File path is not found!</string>
+    <string name="file_not_found">File not found!</string>
+    <string name="io_exception">I/O Error!</string>
+    <string name="file_exists">File exists?</string>
+    <string name="choose_image">Choose an image</string>
+    <string name="choose_image_title">Choose Image</string>
+    <string name="null_bitmap">The bitmap is null!</string>
+    <string name="copy_db_button">Copy database</string>
+    <string name="meeting_image_url">Meeting image URL</string>
+    <string name="get_image">Get image</string>
+    <string name="bitmap_size">Bitmap size:&#160;</string>
+    <string name="number_of_meetings">Total number of meetings:&#160;</string>
+    <string-array name="table_column_names">
+        <item>id</item>
+        <item>title</item>
+        <item>place</item>
+        <item>participants</item>
+        <item>datetime</item>
+        <item>image</item>
+    </string-array>
+    <string-array name="table_column_types">
+        <item>integer</item>
+        <item>text</item>
+        <item>text</item>
+        <item>text</item>
+        <item>text</item>
+        <item>blob</item>
+    </string-array>
+    <string-array name="img_table_column_names">
+        <item>id</item>
+        <item>meetings_id</item>
+        <item>participant</item>
+        <item>image</item>
+    </string-array>
+    <string-array name="img_table_column_types">
+        <item>integer</item>
+        <item>integer</item>
+        <item>text</item>
+        <item>blob</item>
+    </string-array>
+</resources>
