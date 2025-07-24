@@ -378,6 +378,15 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     //We call the decodeFile() method to scale down the image
                     bitmap = decodeFile(selectedImageUri);
+                    if (bitmap != null) {
+                        if (isBitmapTooLarge(bitmap, 1)) { // 1 MB limit
+                            displayToast("Image is too large. Please select a smaller image.");
+                            return;
+                        }
+                        participantImage.setImageBitmap(bitmap);
+                    } else {
+                        displayToast(getString(R.string.null_bitmap));
+                    }
                     //Here we set the image of the ImageView to the selected image
                     if (bitmap != null) {
                         participantImage.setImageBitmap(bitmap);
@@ -399,6 +408,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    private boolean isBitmapTooLarge(Bitmap bitmap, int maxSizeInMB) {
+        int byteCount = bitmap.getByteCount();
+        int maxBytes = maxSizeInMB * 1024 * 1024;
+        return byteCount > maxBytes;
+    }
+
     //Here we decode the image and scales it to reduce memory consumption
     private Bitmap decodeFile(Uri selectedImageUri) throws IOException{
         //Here we open an input stream to access the content of the image
@@ -480,8 +496,17 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Bitmap bitmap){
             //Here we se the image of the imageView object
-            meetingImage.setVisibility(View.VISIBLE);
-            meetingImage.setImageBitmap(bitmap);
+            if (bitmap != null) {
+                if (isBitmapTooLarge(bitmap, 1)) {
+                    displayToast("Meeting image is too large. Please use a smaller image.");
+                    meetingImage.setVisibility(View.GONE);
+                    return;
+                }
+                meetingImage.setVisibility(View.VISIBLE);
+                meetingImage.setImageBitmap(bitmap);
+            } else {
+                displayToast("Could not load image.");
+            }
         }
     }
     // Makes HttpURLConnection and returns InputStream

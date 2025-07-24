@@ -1,4 +1,4 @@
-© 2022 Nhat Truong. Version 1.0
+© 2025 Nhat Truong. Version 1.0.1
 - The main page is where you can add new meeting information (title, place, participants, date and time, meeting image). After filling in all fields, click "Submit" button to save your new meeting.
 - You can also see meeting summary, search and update meetings in "Manage meetings" section on the main page.
 - On "Search" page, type any participant name, or select a date and/or time to search for meetings.
